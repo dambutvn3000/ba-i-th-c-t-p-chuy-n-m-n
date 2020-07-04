@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "Trangchu";
+}
+<style>
+    .header{
+        height:150px;
+        margin-left:10px;
+        width:100%;
+        margin-top:20px;
+    }
+    #bienhieu {
+        border: 1px ;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-left:10px;
+       
+    }
+    .giaohang{
+        width:100%;
+        border:1px solid white;
+        float:left;
+        height:75px;
+    }
+    .xegiao {
+        border: 1px ;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-left: 2px;
+        max-height: 60px;
+       
+        width:29%;
+        margin-top: 10px;
+        float:left;
+
+    }
+    .ship-text {
+        margin-top: 10px;
+        width: 70%;
+        height: 60px;
+        float: right;
+        border: 1px ;
+    }
+    .text1 {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .text2 {
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    
+    .khungseach{
+        
+        margin-left:50px;
+        border :1px ;
+        margin-top:10px;
+        font-size:14px;
+        
+    }
+    .timkiem{
+        font-size:18px;
+        margin-left:10px;
+        text-transform:uppercase;
+        
+    }
+    .guongmat{
+        float:left;
+        margin-left:5px;
+        max-width:400px;
+        max-height:60px;
+        margin-top:10px;
+        border-radius:10px;
+    }
+
+    .khungchinh {
+        width: 70%;
+        margin-top: 10px;
+        border: 1px;
+        margin-left: 5px;
+        float: left;
+        
+    }
+   .sanpham{
+       border:1px solid blue;
+       border-radius:5px;
+       margin-top:5px;
+       overflow:hidden;
+   }
+    .tensp {
+        text-transform: uppercase;
+        text-align: center;
+        margin-left: 5px;
+        font-size: 16px;
+        color: blue;
+        margin-top: 5px;
+        border: 1px;
+    }
+    .ten.gia {
+        
+    }
+    .phanloai {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+</style>
+<div class="container">
+    <div class="header">
+        
+        <div class="row">
+
+            <div class="col-lg-3">
+                <img id="bienhieu" src="~/Models/my-pham-Missa.jpg" class="img-responsive" alt="biển hiệu mỹ phẩm" />
+            </div>
+            <h1> Chào mừng bạn đến với mĩ phẩm MISSHA</h1>
+            <div class="col-lg-3">
+
+                <div class="top-header">
+                    <div class="giaohang">
+                        <div class="xegiao">
+                            <img src="~/Models/xe.jpg" class="img-responsive" alt="shipper" />
+                        </div>
+                        <div class="ship-text">
+                            <div class="text1">
+                                Giao hàng miễn phí
+                            </div>
+                            <div class="text2">
+                                Giao hàng nội thành 20k, Ngoại thành 50K.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-lg-3 khungseach">
+                <div class="timkiem"> Nhập  sản phẩm tìm kiếm</div>
+                <input type="text" placeholder="nhap vao sản phẩm cần tìm" id="timkiem" />
+                <button type="submit" id="tim"> tìm kiếm</button>
+
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="khungchinh">
+            <div class="phanloai">
+                <a href="">kem dưỡng da</a> 
+            </div>
+
+            <div class="col-lg-3">
+                <a href="">
+                    <div class="sanpham">
+                        <img src="~/Models/mat.jpg" class="img-responsive" alt="kem duong da" />
+
+                    </div>
+                    <div class="tensp">
+                        <div>
+                            Kem dưỡng da MISSHA
+                        </div>
+                        <div>
+                            Giá: 500000đ
+                        </div>
+                     </div>
+                 </a>
+
+            </div>
+            
+
+        </div>
+        <div class="khungphu">
+
+        </div>
+    </div>
+</div>
