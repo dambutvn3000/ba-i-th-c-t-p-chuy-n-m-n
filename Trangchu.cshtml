@@ -1,7 +1,10 @@
-﻿
+﻿@model Data.Home.HomeModel
+
+
 @{
-    ViewBag.Title = "Trangchu";
+    ViewBag.Title = "Trang Chủ";
 }
+
 <div class="baner">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -35,14 +38,16 @@
         </a>
     </div>
 </div>
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            
+
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container pad-50">
     <div class="row">
         <div class="col-lg-6 col-xs-12 col-md-12">
             <img src="~/images/banner_2.jpg" class="img-responsive" alt="san pham tieu bieu" />
@@ -52,243 +57,88 @@
         </div>
     </div>
 </div>
-<div class="container">
+
+
+
+
+
+
+<div class="container pad-50">
     <div class="row">
         <div class="col-md-12">
             <div class="text">
-                <a href="/"><h2 style="font-size:28px"> Hàng mới về</h2></a>
+                <h2 class="title-dex"> Hàng mới về</h2>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/kem_2.jpg" class="img-responsive" alt="Kem dưỡng da Innifree " />
+        @if (Model.ListNewsProducts.Count() > 0)
+        {
+            foreach (var it in Model.ListNewsProducts)
+            {
+                <div class="col-lg-3 col-xs-6 col-md-6">
+                    @{Html.RenderPartial("_product", it);}
+
                 </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Kem dưỡng da Innifree </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 650000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/kem_5.jpg" class="img-responsive" alt="Kem dưỡng da CAPTURE " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Kem dưỡng da CAPTURE </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 750000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/kem_3.jpg" class="img-responsive" alt="Kem dưỡng da CAPTURE " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Kem dưỡng da CAPTURE </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 750000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/kem_4.jpg" class="img-responsive" alt="Kem dưỡng da SK-ginSeng " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Kem dưỡng da SK-ginSeng </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 850000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            }
+
+        }
     </div>
 </div>
+
+
+
+
 <div class="container">
     <div class="row">
+
         <div class="col-lg-12 col-xs-12 col-md-12">
-            <img src="~/images/baner_3.jpg" class="img-responsive" alt="san pham tieu bieu" />
+            <img src="~/images/baner_3.jpg" class="img-responsive" alt="san pham tieu bieu" style="margin:auto" />
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container pad-50">
     <div class="row">
         <div class="col-lg-12 col-xs-12 col-md-12 ">
             <div class="text">
-                <a href="/"><h2 style="font-size:28px"> sản phẩm bán chạy</h2></a>
+                <h2 class="title-dex"> sản phẩm bán chạy</h2>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-xs-6 col-md-6 ">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_1.jpg" class="img-responsive" alt="Sữa tắm trắng da LUVSTAR " />
+        @if (Model.ListSellProducts.Count() > 0)
+        {
+            foreach (var it in Model.ListSellProducts)
+            {
+                <div class="col-lg-3 col-xs-6 col-md-6 ">
+                    @{Html.RenderPartial("_product", it);}
                 </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da LUVSTAR </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 550000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_2.jpg" class="img-responsive" alt="Sữa tắm trắng da medifferent " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da Medifferent </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 550000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_4.jpg" class="img-responsive" alt="Sữa tắm trắng da Enchanteur " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da Enchanteur </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 450000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_3.jpg" class="img-responsive" alt="Sữa tắm trắng da BLACKBUBLE WASH " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da BLACKBUBLE WASH </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 650000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_6.jpg" class="img-responsive" alt="Sữa tắm trắng da Lavandor Salame " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da Lavandor Salame </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 650000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_7.jpg" class="img-responsive" alt="Sữa tắm trắng da PURITE " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da PURITE </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 550000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_8.jpg" class="img-responsive" alt="Sữa tắm trắng da READY-2 WHITE " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da READY-2 WHITE </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 350000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-md-6">
-            <div class="sanpham">
-                <div class="anhsanpham">
-                    <img src="~/images/suatam_12.jpg" class="img-responsive" alt="Sữa tắm trắng da Valentine " />
-                </div>
-                <div class="a-center dep ">
-                    <div class="ghichu">
-                        <a href="/"> Sữa tắm trắng da Valentine </a>
-                    </div>
-                    <div class="ghichu">
-                        <a href="/"> 550000đ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            }
+
+        }
+
     </div>
 </div>
-<div class="container">
+<div class="container pad-50">
     <div class="row">
         <div class="col-md-12">
             <div class="text">
-                <a href="/"><h2 style="font-size:28px"> nula blog</h2></a>
+                <h2 class="title-dex"> Tin Tức</h2>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6 vien col-xs-12 col-md-12">
-            <img src="~/images/tin_1.jpg" class="img-responsive" alt="tin tức trang điểm " />
-            <div class="ghichu">
-                <h3 style="max-width:400px ;text-align:center"> <a href="/"> Hãy nắm giữ bí kíp để tránh chọn sai sản phẩm </a></h3>
-                <p class="chuthich">
-                    Nếu chị em ta được lấy lại sồ tiền để bỏ ra cho việc mua các sản phẩm trang điểm không phù hợp màu...
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-xs-12 col-md-12">
+        @if (Model.ListNews.Count() >0 )
+        {
+            foreach (var it in Model.ListNews)
+            {
+                <div class="col-lg-6 vien col-xs-12 col-md-12">
+                    @{Html.RenderPartial("_News", it);}
+                </div>
+            }
 
-            <img src="~/images/tin_2.jpg" class="img-responsive" alt="tin tức làm đẹp" />
-            <div class="ghichu">
-                <h3 style="max-width:400px ;text-align:center"> <a href="/"> Làm đẹp da cực dễ dàng nếu nàng nắm được 3 bí kíp </a></h3>
-                <p class="chuthich">
-                    Đã mang danh là " Phái Đẹp" nên các cô gái đều mong muốn muốn xinh tươi hết mức có thể trong mắt người đối ...
-                </p>
-            </div>
-        </div>
+        }
+                        
+
     </div>
 </div>
-
